@@ -22,8 +22,11 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "ohm-contrib"
 
   s.add_dependency "ohm", "~> 1.1"
+  s.add_dependency "json", "~> 1.4.6"
 
-  s.add_development_dependency "cutest"
-  s.add_development_dependency "redis"
+  s.add_development_dependency "pry"
+  s.add_development_dependency "cutest", "1.1.3"
+  s.add_development_dependency "redis", "2.2.2"
   s.add_development_dependency "override"
+
 end

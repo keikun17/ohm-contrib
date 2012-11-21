@@ -30,3 +30,7 @@ def assert_nothing_raised(*exceptions)
     flunk(caller[1])
   end
 end
+
+def assert_equal(a, b)
+  assert a == b
+end

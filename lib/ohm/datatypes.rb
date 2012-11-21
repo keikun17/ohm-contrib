@@ -12,7 +12,7 @@ module Ohm
       Float     = lambda { |x| x.to_f }
       Symbol    = lambda { |x| x.to_sym }
       Boolean   = lambda { |x| Ohm::DataTypes.bool(x) }
-      Time      = lambda { |t| t && (t.kind_of?(::Time) ? t : ::Time.parse(t)) }
+      Time      = lambda { |t| raise NotImplemented}
       Date      = lambda { |d| d && (d.kind_of?(::Date) ? d : ::Date.parse(d)) }
       Timestamp = lambda { |t| t && UnixTime.at(t.to_i) }
       Hash      = lambda { |h| h && SerializedHash[h.kind_of?(::Hash) ? h : JSON(h)] }
